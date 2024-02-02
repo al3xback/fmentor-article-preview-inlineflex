@@ -10,11 +10,22 @@
 	flex-direction: column;
 }
 
+.card__author,
+.card__share-action {
+	display: flex;
+	align-items: center;
+}
+
 .card,
 .card__author-img-box,
-.card__author-info {
+.card__author-info,
+.card__share-action-buttons li {
 	display: inline-flex;
 	flex-direction: column;
+}
+
+.card__share-action-buttons {
+	display: inline-flex;
 }
 
 .card {
@@ -63,8 +74,6 @@
 }
 
 .card__author {
-	display: flex;
-	align-items: center;
 	gap: func.em(15, var.$font-size-primary);
 	padding-right: func.em(45, var.$font-size-primary);
 }
@@ -117,8 +126,6 @@
 	left: 0;
 	bottom: 0;
 	right: 0;
-	display: flex;
-	align-items: center;
 	gap: func.em(20, var.$font-size-primary);
 	padding: inherit;
 	padding-right: func.em(90, var.$font-size-primary);
@@ -131,12 +138,8 @@
 	letter-spacing: func.em(3, var.$font-size-primary);
 }
 
-.card__share-action-buttons,
-.card__share-action-buttons li {
-	display: inline-flex;
-}
-
 .card__share-action-buttons {
+	align-items: center;
 	gap: func.em(15, var.$font-size-primary);
 }
 
@@ -160,14 +163,14 @@
 }
 
 @media (min-width: 60em) {
-	.card__image,
-	.card__content {
-		display: inline-flex;
-	}
-
 	.card {
 		flex-direction: row;
 		max-width: func.em(720, var.$font-size-primary);
+	}
+
+	.card__image,
+	.card__content {
+		display: inline-flex;
 	}
 
 	.card__image {
